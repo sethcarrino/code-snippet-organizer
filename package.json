@@ -1,0 +1,21 @@
+{
+  "name": "code-snippet-organizer",
+  "version": "1.0.0",
+  "description": "Code Snippet Organizer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Seth Carrino",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.6",
+    "passport": "^0.3.2",
+    "path": "^0.12.7"
+  }
+}
