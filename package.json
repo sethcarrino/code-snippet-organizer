@@ -1,0 +1,19 @@
+{
+  "name": "code-snippet-organizer",
+  "version": "1.0.0",
+  "description": "Code Snippet Organizer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sethcarrino/code-snippet-organizer.git"
+  },
+  "author": "Seth Carrino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sethcarrino/code-snippet-organizer/issues"
+  },
+  "homepage": "https://github.com/sethcarrino/code-snippet-organizer#readme"
+}
