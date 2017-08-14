@@ -1,11 +1,10 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
-const usersRoutes = require('./routes/users');
+const usersRoutes = require('./routes/routes');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const bluebird = require('bluebird');
-const passport = require('passport');
 mongoose.Promise = bluebird;
 
 const app = express();
@@ -31,7 +30,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('public'));
 
 // router setup
-app.use('/', routes);
+app.use('/', usersRoutes);
 
 
 mongoose
