@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5991e37049314a1500ee07fb"},"passwordHash":"$2a$08$MdTeyAL/h0oK6oFMaCeKvekUSYiDgrIz4P7jp9V1ifm0Puv6DmxJq","username":"sethcarrino","name":"Seth Carrino","email":"sethcarrino@gmail.com","__v":0,"id":"5991e37049314a1500ee07fb"}
+{"_id":{"$oid":"599202db578ffc1f43d9de3d"},"passwordHash":"$2a$08$E.SfUmmjpNg0/ZmS3UF67.6GzcIBPJV4iMYBLjXWew.aOlLa6XxNu","username":"morgancarrino","name":"Morgan Carrino","email":"morgancarrino@gmail.com","__v":0}
+{"_id":{"$oid":"59934849fbc41717c787e1d6"},"passwordHash":"$2a$08$bEp7MWBm.YQAgnqqkY2kReVrgz5OQpIM7Kg.64dc1ftMpH5Cz/yTO","username":"showeimer","name":"Sho Weimer","email":"shoboi@gmail.com","__v":0}

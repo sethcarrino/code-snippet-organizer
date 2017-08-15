@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Snipster</title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Search Results</h1>
-      <a href="/" id="back">Home</a>
-    </header>
-    <div class="container">
-      {{#snippets}}
-      <div class="snippets">
-        <h2 id="name">{{type}}</h2>
-        <h5 id="job">{{job}} {{company}}</h5>
-      </div>
-      {{/snippets}}
-    </div>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Snipster</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+  <div>
+  <a href="/logout">Logout</a>
+  <form action="/search" method="get">
+    <input type="text" name="mySnippets">
+    <button>Search</button>
+  </form>
+    <a href="/">Home</a>
+  </div>
+
+  <div class="wrapper" id="snippets">
+    {{#snippets}}
+      <a href="/snippets/createSnippet?id={{ _id }}">
+        <p>{{title}}</p>
+      </a>
+    {{/snippets}}
+    <form action="/snippets/createSnippet" method="get">
+      <button name="add"> Create Snippet </button>
+    </form>
+  </div>
+</body>
+
 </html>

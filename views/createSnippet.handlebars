@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snipster</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <a href="/logout">Logout</a>
+    <a href="/">Home</a>
+    <div>
+      <form action="/snippets" method="post">
+        <label for="text">Title</label>
+        <input type="text" name="title" value="{{snippet.title}}" placeholder="Title"/>
+
+        <label for="body">Body</label>
+        <input type="textarea" name="body" value="{{snippet.body}}" placeholder="Body"/>
+
+        <label for="notes">Notes</label>
+        <input type="textarea" name="notes" value="{{snippet.notes}}" placeholder="Notes"/>
+
+        <label for="language">Language</label>
+        <input type="text" name="language" value="{{snippet.language}}" placeholder="Language"/>
+
+        <label for="tags">Tags</label>
+        <input type="text" name="tags" value="{{snippet.tags}}" placeholder="Tags"/>
+
+         {{#if snippet._id}}
+          <input type="hidden" name="_id" value="{{snippet._id}}" />
+        {{/if}}
+          <div>
+            <span><a href="/deleteSnippet/?id={{snippet._id}}">Delete Snippet</a></span>
+            <button name="add"> Submit </button>
+          </div>
+
+      </form>
+    </div>
+
+  </body>
+</html>

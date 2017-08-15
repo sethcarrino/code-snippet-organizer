@@ -1,69 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Snipster</title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <header>
-      <h2>Welcome, {{user.name}}</h2>
-      <a href="/edit?id={{user._id}}">Edit Account</a>
-      <a href="/logout">Log out</a>
-      <div class="header">
 
-        <form action="/search" method="post">
-          <input type="text" name="search" value="" placeholder="Search database">
-          <button class="dataButton">Search</button>
-        </form>
-      </div>
-    </header>
-    <nav>
-        <a class="button" href="/newSnippet">New Snippet</a>
-    </nav>
+<head>
+  <meta charset="utf-8">
+  <title>Snipster</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
 
-    <table border="1">
-      <tr>
-        <th>
-          Type
-        </th>
-        <th>
-          Body
-        </th>
-        <th>
-          Notes
-        </th>
-        <th>
-          Language
-        </th>
-        <th>
-          tags
-        </th>
-      </tr>
-      {{#snippets}}
-      <tr>
-        <td>
-          <a href="/newSnippet?id={{_id}}">{{type}}</a>
-        </td>
-        <td>
-          {{body}}
-        </td>
-        <td>
-          {{notes}}
-        </td>
-        <td>
-          {{language}}
-        </td>
-        <td>
-          {{tags}}
-        </td>
-        <td>
-          <a href="/deleteSnippet/?id={{_id}}">Delete</a>
-        </td>
-      </tr>
-      {{/snippets}}
+<body>
 
-    </table>
+  <div>
+  <a href="/logout">Logout</a>
+  <form action="/search" method="get">
+    <input type="text" name="mySnippets">
+    <button>Search</button>
+  </form>
+  </div>
 
-  </body>
+  <h1>Snippets</h1>
+
+  <div>
+    {{#snippets}}
+      <a href="/snippets/createSnippet?id={{ _id }}">
+        <p>{{title}}</p>
+      </a>
+    {{/snippets}}
+    <form action="/snippets/createSnippet" method="get">
+      <button name="createSnippet"> Create Snippet </button>
+    </form>
+  </div>
+</body>
+
 </html>
